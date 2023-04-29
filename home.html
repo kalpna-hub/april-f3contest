@@ -33,9 +33,11 @@
 </div>
  
   <script>
-    document.getElementById('username').innerHTML = localStorage.getItem("username")
-    document.getElementById('email').innerHTML = localStorage.getItem("email")
-    document.getElementById('password').innerHTML = localStorage.getItem("password")
+    const user = JSON.parse(localStorage.getItem("user"));
+
+      document.getElementById("username").textContent = user.name;
+      document.getElementById("email").textContent = user.email;
+      document.getElementById("password").textContent = user.pass;
   </script>
 </body>
 </html>
