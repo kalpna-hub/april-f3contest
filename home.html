@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+<body style="background-color: black; color: white;">
+
+    <section class="nav" style=" display: flex;
+    justify-content: space-between;
+    padding: 20px; border: 2px solid white; ">
+        <p>Header</p>
+        <div style="display: flex;
+        justify-content: space-between;
+        gap: 20px;">
+          <p id="header-signup-btn">Signup</p>
+          <p id="header-profile-btn">Profile</p>
+        </div>
+      </section>
+    
+  <p >Profile</p>
+  <p id="username">Full Name: </p>
+  <p id="email">Email:</p>
+  <p id="password">Password:</p>
+  <div id="logout">
+    <a id="logout" href="logout.html"><button>Logout</button> <i id="lo" class="fa fa-sign-out" aria-hidden="true"></i></a>
+</div>
+ 
+  <script>
+    document.getElementById('username').innerHTML = localStorage.getItem("username")
+    document.getElementById('email').innerHTML = localStorage.getItem("email")
+    document.getElementById('password').innerHTML = localStorage.getItem("password")
+  </script>
+</body>
+</html>
